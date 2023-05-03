@@ -1,0 +1,6 @@
+*~
+*.tmp
+*.swp
+*.pptx
+vendor
+*.idea
