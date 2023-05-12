@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 require_once '../vendor/autoload.php';
 
-use Database\MyPdo;
-
 MyPDO::setConfiguration('mysql:host=mysql;dbname=cutron01_music;charset=utf8', 'web', 'web');
 $html = <<<HTML
 <!DOCTYPE html>
@@ -26,4 +24,3 @@ $stmt->execute();
 while (($ligne = $stmt->fetch()) !== false) {
     $html .= "<p>{$ligne['name']}\n";
 }
-echo $html;
