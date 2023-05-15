@@ -26,11 +26,11 @@ $albums = MyPDO::getInstance()->prepare(
     <<<'SQL'
     SELECT year, name
     FROM album
-    WHERE artistId = 17
+    WHERE artistId = ?
     ORDER BY 1 desc
 SQL
 );
-$albums->execute();
+$albums->execute([$artistId]);
 while(($album = $albums->fetch()) !== false) {
     $webPage->appendContent("<p>{$webPage->escapeString(" {$album['year']} {$album['name']}")}</p>");
 }
