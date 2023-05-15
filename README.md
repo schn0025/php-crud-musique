@@ -9,6 +9,7 @@ utilisation de PHPStorme 8.2
 ## Serveur Web local
 utiliser la comande dans le répertoire racine :
 php -d display_errors -S localhost:8000 -t public/
+ou: composer start:linux
 
 ## Style de codage
 php vendor/bin/php-cs-fixer fix --dry-run  

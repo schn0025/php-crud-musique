@@ -19,5 +19,8 @@
     },
   "require": {
     "ext-pdo": "*"
-  }
+  },
+    "scripts": {
+        "start:linux" : "bin/run-server.sh"
+    }
 }
