@@ -12,7 +12,7 @@ $webPage->setTitle("liste artist");
 
 $stmt = MyPDO::getInstance()->prepare(
     <<<'SQL'
-    SELECT id, name
+    SELECT name, id
     FROM artist
     ORDER BY name
 SQL
@@ -21,6 +21,6 @@ SQL
 $stmt->execute();
 
 while (($ligne = $stmt->fetch()) !== false) {
-    $webPage->appendContent("<p>{$webPage->escapeString("{$ligne['name']}")}</p>\n");
+    $webPage->appendContent("<p>{$webPage->escapeString("{$ligne['name']} {$ligne['id']}")}</p>\n");
 }
 echo $webPage->toHTML();
