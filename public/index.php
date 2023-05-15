@@ -21,6 +21,8 @@ SQL
 $stmt->execute();
 
 while (($ligne = $stmt->fetch()) !== false) {
-    $webPage->appendContent("<p>{$webPage->escapeString("{$ligne['name']} {$ligne['id']}")}</p>\n");
+    $webPage->appendContent("<a href='artist.php?artistId={$webPage->escapeString(strval($ligne['id']))}'>{$webPage->escapeString($ligne['name'])}</a><br/>\n");
+
+
 }
 echo $webPage->toHTML();
