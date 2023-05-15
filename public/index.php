@@ -8,7 +8,6 @@ use Html\WebPage;
 require_once '../vendor/autoload.php';
 $webPage = new WebPage();
 
-MyPDO::setConfiguration('mysql:host=mysql;dbname=cutron01_music;charset=utf8', 'web', 'web');
 $webPage->setTitle("liste artist");
 
 $stmt = MyPDO::getInstance()->prepare(
