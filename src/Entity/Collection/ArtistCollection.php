@@ -8,7 +8,7 @@ use Database\MyPdo;
 use Entity\Artist;
 use PDO;
 
-class ArtisteCollection
+class ArtistCollection
 {
     /**
      * findAll renvoi un tableau de tous les artistes sans filtre
