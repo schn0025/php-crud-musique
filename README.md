@@ -4,7 +4,7 @@
 Schneider Arthur 
 
 ## Installation / Configuration
-Utilisation de PHPStorme 8.2
+Utilisation de PHPStorm 8.2
 
 ## Serveur Web local
 Utiliser la command dans le répertoire racine :

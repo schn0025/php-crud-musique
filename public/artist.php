@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use Database\MyPdo;
+use Entity\MyPdo;
 use Html\WebPage;
 
 $webPage = new WebPage();

@@ -5,8 +5,9 @@ namespace Tests\Helper;
 // here you can define custom actions
 // all public methods declared in helper class will be available in $I
 
-use Codeception\Exception\ModuleException;
+use Codeception\Exception\ModuleException as ModuleExceptionAlias;
 use Database\MyPdo;
+
 
 class Crud extends \Codeception\Module
 {
@@ -14,9 +15,9 @@ class Crud extends \Codeception\Module
     {
         try {
             MyPdo::setConfiguration($this->getModule('Db')->_getConfig('dsn'));
-        } catch (ModuleException $moduleException) {
+        } catch (ModuleExceptionAlias $moduleException) {
             $this->fail('Codeception DB module not found');
-        } catch (ModuleException $e) {
+        } catch (ModuleExceptionAlias $e) {
         }
     }
 }
