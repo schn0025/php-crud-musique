@@ -34,6 +34,12 @@
                       "bin/run-server.bat"],
 
       "test:cs" : "php vendor/bin/php-cs-fixer fix --dry-run  ",
-      "fix:cs" : "php vendor/bin/php-cs-fixer fix"
+      "fix:cs" : "php vendor/bin/php-cs-fixer fix",
+      "test:crud " : "php vendor/bin/codecept run Crud",
+      "test:codecept" : "php vendor/bin/codecept run",
+      "test" : [
+        "@test:cs",
+        "@test:codecept"
+      ]
     }
 }

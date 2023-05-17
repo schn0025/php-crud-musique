@@ -22,6 +22,6 @@ class ArtistCollection
         ORDER BY name
         SQL);
         $cmd->execute();
-        return $cmd->fetchAll(PDO::FETCH_CLASS);
+        return $cmd->fetchAll(PDO::FETCH_CLASS, Artist::class);
     }
 }

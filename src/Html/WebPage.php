@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 namespace Html;
+
 class WebPage
 {
     private string $head;
@@ -147,7 +148,7 @@ class WebPage
      */
     public function escapeString(string $string): string
     {
-        return htmlspecialchars($string, $flags = ENT_QUOTES | ENT_SUBSTITUTE | ENT_HTML5,);
+        return htmlspecialchars($string, $flags = ENT_QUOTES | ENT_SUBSTITUTE | ENT_HTML5, );
     }
 
     /** getLastModification permet d'avoir la date de la dernière modification effectuer
