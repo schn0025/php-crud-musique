@@ -8,6 +8,7 @@ class Album
 {
     private int $id;
     private string $name;
+    private int $year;
     private int $artistId;
     private int $genreId;
     private int $coverId;
@@ -26,6 +27,14 @@ class Album
     {
         return $this->name;
     }
+    /** getYear donne l'année de parution de l'album
+     * @return int année de parution de l'album
+     */
+    public function getYear(): int
+    {
+        return $this->year;
+    }
+
     /** getArtistId donne l'Id de l'artist ayant fait l'album
      * @return int Id de l'artist ayant fait l'album
      */

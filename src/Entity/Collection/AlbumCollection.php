@@ -18,11 +18,11 @@ class AlbumCollection
     {
         $cmd = MyPDO::getInstance()->prepare(
             <<<'SQL'
-    SELECT year, name
-    FROM album
-    WHERE artistId = ?
-    ORDER BY 1 desc
-    SQL
+        SELECT *
+        FROM album
+        WHERE artistId = ?
+        ORDER BY year desc, name
+        SQL
         );
         $cmd->execute([$artistId]);
         return $cmd->fetchAll(PDO::FETCH_CLASS, Album::class);

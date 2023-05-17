@@ -8,7 +8,6 @@ namespace Tests\Helper;
 use Codeception\Exception\ModuleException as ModuleExceptionAlias;
 use Database\MyPdo;
 
-
 class Crud extends \Codeception\Module
 {
     public function _initialize($settings = []): void
