@@ -6,3 +6,5 @@
 *.idea
 *.php-cs-fixer.cache
 *.mypdo.ini
+tests/musiclite.sqlite
+tests/musiclite.sqlite_snapshot
