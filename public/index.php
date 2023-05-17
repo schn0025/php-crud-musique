@@ -3,26 +3,17 @@
 declare(strict_types=1);
 
 use Database\MyPdo;
+use Entity\Collection\ArtistCollection;
 use Html\WebPage;
 
 require_once '../vendor/autoload.php';
 $webPage = new WebPage();
-
+$artistCol = new ArtistCollection();
 $webPage->setTitle("liste artist");
+$stmt = $artistCol->findAll();
 
-$stmt = MyPDO::getInstance()->prepare(
-    <<<'SQL'
-    SELECT name, id
-    FROM artist
-    ORDER BY name
-SQL
-);
-
-$stmt->execute();
-
-while (($ligne = $stmt->fetch()) !== false) {
-    $webPage->appendContent("<a href='artist.php?artistId={$webPage->escapeString(strval($ligne['id']))}'>{$webPage->escapeString($ligne['name'])}</a><br/>\n");
-
-
+foreach ($stmt as $artist) {
+    $webPage->appendContent("<a href='artist.php?artistId={$webPage->escapeString(strval($artist->getId()))}'>{$webPage->escapeString($artist->getName())}</a><br/>\n");
 }
+
 echo $webPage->toHTML();
