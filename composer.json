@@ -8,7 +8,12 @@
             "": "src/"
         }
     },
-    "authors": [
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests"
+    }
+  },
+  "authors": [
         {
             "name": "Arthur Schneider",
             "email": "arthur.schneider@etudiant.univ-reims.fr"
