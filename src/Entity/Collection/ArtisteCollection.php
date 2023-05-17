@@ -8,11 +8,11 @@ use Database\MyPdo;
 use Entity\Artist;
 use PDO;
 
-class ArtisteColection
+class ArtisteCollection
 {
     /**
-     * finndAll renvoi un tableau de tout les artiste sans filtre
-    * @return Artist[] liste des artistes
+     * findAll renvoi un tableau de tous les artistes sans filtre
+     * @return Artist[] liste des artistes
      */
     public static function findAll(): array
     {
